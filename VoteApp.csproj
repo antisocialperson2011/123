@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>VoteApp</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="System.Drawing.Drawing2D" />
+    <Using Include="System.Text.Json" />
+    <Using Include="System.Security.Cryptography" />
+  </ItemGroup>
+</Project>

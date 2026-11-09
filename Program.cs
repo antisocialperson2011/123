@@ -1,16 +1,10 @@
-using System;
-using System.Windows.Forms;
-
-namespace VotingApp
+ApplicationConfiguration.Initialize();
+while (true)
 {
-    internal static class Program
-    {
-        [STAThread]
-        private static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-        }
-    }
+    Store.Current = null;
+    Application.Run(new LoginForm());
+    if (Store.Current == null) break;      // окно входа закрыли крестиком
+    var main = new MainForm();
+    Application.Run(main);
+    if (!main.Logout) break;               // выход из приложения
 }
